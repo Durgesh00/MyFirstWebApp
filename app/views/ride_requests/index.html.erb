@@ -1,0 +1,26 @@
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<head> <h1>List of Rides</h1> </head>
+<title>Ride list </title>
+<body>
+  <table style="width:50%">
+  <tr>
+    <th>User Name</th>
+    <th>Status</th>
+    
+  </tr>
+  <% @requests.each do |ele| %>
+  <tr>
+    <td><%=ele.user.first_name%></td>
+    <td><%=ele.status%></td>
+   
+
+  </tr>
+  <% end%>
+</table>
+
+  
+
+</body>
+</html>
