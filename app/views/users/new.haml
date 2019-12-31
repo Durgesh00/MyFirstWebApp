@@ -1,0 +1,19 @@
+= form_with(url: "/users", method: "POST") do
+  = label_tag(:first_name, "First Name")
+  = text_field_tag(:first_name)
+  %br
+  = label_tag(:last_name, "Last Name")
+  = text_field_tag(:last_name)
+  %br
+  = label_tag(:contact_number, "Contact Number")
+  = text_field_tag(:contact_number)
+  %br
+  = label_tag(:email, "email_id")
+  = text_field_tag(:email)
+  %br
+  = label_tag(:password, "password")
+  = password_field_tag(:password)
+  %br
+  = submit_tag("Submit")
+%p
+  =@error

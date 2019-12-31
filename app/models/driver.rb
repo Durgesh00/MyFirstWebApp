@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
+
 class Driver < ApplicationRecord
+  
   has_many :ride
   validates :first_name, :last_name, :contact_number, :email, :password, presence: true
   validates :contact_number, uniqueness: true

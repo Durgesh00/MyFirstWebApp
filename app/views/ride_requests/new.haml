@@ -1,0 +1,15 @@
+= form_with(url: "/ride_requests", method: "POST") do
+ 
+  %br
+  = label_tag(:destination, " Destination")
+  = text_field_tag(:Destination)
+  %br
+  = label_tag(:email, "email_id")
+  = text_field_tag(:email)
+  %br
+  = label_tag(:password, "password")
+  = password_field_tag(:password)
+  %br
+  = submit_tag("Submit")
+
+  / = @@rideid

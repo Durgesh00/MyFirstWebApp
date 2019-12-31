@@ -10,4 +10,5 @@ class RidesController < ApplicationController
     end
     @all = rides
   end
+
 end

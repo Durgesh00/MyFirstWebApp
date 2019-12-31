@@ -15,6 +15,7 @@ class User < ApplicationRecord
   validates :contact_number, numericality: { only_integer: true }
   validates :email, email: true
   validates :password, length: { in: 6..20 }
+  has_secure_password
   before_save do
     self.first_name = first_name.titleize
     self.last_name = last_name.titleize

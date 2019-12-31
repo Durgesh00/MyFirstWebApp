@@ -13,6 +13,7 @@
     <th>Location</th>
     <th>Driver Name</th>
     <th>Request Count</th>
+    <th>Book Rides</th>
     <th>View Request</th>
   </tr>
   <% @all.each do |ele| %>
@@ -23,13 +24,15 @@
     <td><%=ele.location%></td>
     <td><%=ele.driver_name%></td>
     <td><%=ele.ride_requests.count%></td>
+    <td><%=link_to 'Book Ride', new_ride_ride_request_path(ele) %></td>
     <td><%=link_to 'View Requests', ride_ride_requests_path(ele) %></td>
 
   </tr>
   <% end%>
 </table>
-
+ <a href="/users/new"  type="button" class="btn btn-default">create new user</a>
+ <!-- <a href="/ride_requests/new"  type="button" class="btn btn-default">book ride</a> -->
   
-
+<div><p><%=@error%></p></div>
 </body>
 </html>
